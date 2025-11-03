@@ -2,7 +2,9 @@ FROM ruby:3.2-alpine
 
 WORKDIR /app
 COPY Gemfile* ./
-RUN apk add --no-cache build-base && bundle install && apk del build-base
+RUN apk add --no-cache build-base postgresql-dev postgresql-libs \
+  && bundle install \
+  && apk del build-base postgresql-dev
 
 COPY . .
 

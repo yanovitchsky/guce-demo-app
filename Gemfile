@@ -2,3 +2,6 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'puma'
+gem 'sequel'
+gem 'rake'
+gem 'pg'
